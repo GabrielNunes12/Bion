@@ -1,0 +1,219 @@
+﻿<?php iclude ("classe/conexão.php");
+
+?>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+      <!-- Barra de Pesquisa -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: darkred;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: darkred;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 0; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 100px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 10% solid #888;
+    width:80%; /* Could be more or less, depending on screen size */
+    
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+</style>
+    </head>
+
+    <body>
+
+      <nav>
+    <div class="nav-wrapper white">
+      <a href="index.html" class="brand-logo left  black-text"><img src="img/logo2.png"></a>
+       <a href="#" data-activates="menu-mobile" class="button-collapse right">
+        <i class="material-icons black-text">menu</i>
+        
+       </a>
+
+       <ul id="menu-mobile" class="side-nav">
+        <li><div class="user-view">
+      </div>
+      <UL>
+       <li><a class="waves-effect" href="login.html" title="Sair"><i class="material-icons">exit_to_app</i>Sair</a></li>
+</UL>
+</nav>
+<BR>
+<BR>
+<BR>
+<CENTER><IMG SRC="IMG/logocad.png"></CENTER>
+<br>
+<br>
+<Br>
+<CENTER><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Cadastre-se</button></CENTER>
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="logado.php">
+    <div class="container">
+      <h1>Cadastro</h1>
+      <p>Por favor preencha os campos abaixo para efetuar o cadastro.</p>
+      <hr>
+      <label for="Nome"><b>Nome Completo</b></label>
+      <input type="text" placeholder="Digite Seu nome Completo" name="text" required>
+      
+      <label for="curso"><b>Curso</b></label>
+      <select placeholder="Digite o nome do seu Curso" name="text" required>--slecionar</select>
+
+      <label for="matricula"><b>Matricula</b></label>
+      <input type="text" placeholder="Digite o numero da sua matricula" name="text" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Digite seu Email" name="email" required>
+
+      <label for="psw"><b>Senha</b></label>
+      <input type="password" placeholder="Digite Sua senha" name="psw" required>
+
+      
+
+      <p>Ao criar uma conta você concorda com os <a href="#" style="color:dodgerblue">Termos & Privacidade</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+        <button type="submit" class="signupbtn" >Registrar</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+}
+</script>
+
+         <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.js"></script>
+      <script> 
+        // Menu Mobile
+            $(".button-collapse").sideNav();
+       </script>
+       <script>
+// Initialize collapse button
+  $(".button-collapse").sideNav();
+</script>
+<script >
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  ('.collapsible').collapsible();
+</script> 
+
+   
+     </body>
+
+  </html>
+        

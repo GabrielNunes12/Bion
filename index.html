@@ -1,0 +1,108 @@
+﻿ <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+?> 
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+      <!-- Barra de Pesquisa -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <nav>
+    <div class="nav-wrapper white">
+      <a href="index.html" class="brand-logo left  black-text"><img src="img/logo2.png"></a>
+       <a href="#" data-activates="menu-mobile" class="button-collapse right">
+        <i class="material-icons black-text">menu</i>
+        
+       </a>
+
+
+      <ul id="menu-mobile" class="side-nav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="img/fundo.jpg">
+    </div>
+      <a href="#!user"><img class="circle" src="img/eu.jpg"></a>
+      <a href="#!name"><span class="white-text name">#name</span></a>
+      <a href="#!email"><span class="white-text email">#email</span></a>
+    </li>
+   
+    <li><a href="#!"><i class="material-icons">
+import_contacts</i>Biblioteca</a></li>
+    <li><a href="#!"><i class="material-icons">local_library</i>Meus Livros Locados</a></li>
+    <li><a href="#!"><i class="material-icons">
+library_books</i>Livros em Espera</a></li>
+    <li><a href="#!"><i class="material-icons">
+info_outline</i>Minhas Informaçoes</a></li>
+    <li><a href="#!"><i class="material-icons">notifications</i>Notificaçoes</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="#!"><i class="material-icons">
+settings</i>Configuraçoes</a></li>
+    <li><a href="login.html"><i class="material-icons">exit_to_app</i>Sair</a></li>
+ 
+  </ul>
+</div>
+  
+  </nav>
+  <br>
+  <br>
+  <br>
+  <br>
+  <center><B><U>PESQUISAR</U></B></center>
+  <BR>
+  <BR>
+ <center>
+  <nav >
+    <div class="nav-wrapper white">
+      <form action="https://www.google.com.br/search?q=google.com+biblioteca&oq=google.com%2Fbib&aqs=chrome.2.69i58j69i57j0l2.8726j0j4&sourceid=chrome&ie=UTF-8">
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav>
+</center>
+
+
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.js"></script>
+      <script> 
+        // Menu Mobile
+            $(".button-collapse").sideNav();
+       </script>
+       <script>
+// Initialize collapse button
+  $(".button-collapse").sideNav();
+</script>
+<script >
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  ('.collapsible').collapsible();
+</script> 
+
+   
+     </body>
+
+  </html>
+        
